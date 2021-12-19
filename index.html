@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>left unsaid</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    </head>
+    <body class="container">
+        <div class="imgholder">
+            <img id="poster" src="foyer.gif"/>
+        </div>
+    </body>
+    <style>
+        .container {
+            top: 0;
+            left: 0;
+            background: black;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .imgholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+        #poster {
+            max-width: 100%;
+        }
+    </style>
+    <script>
+        let imgs = [ "foyer.gif", "living room.gif", "dining room.gif", "kitchen.gif", "porch.gif" ];
+        let n = Math.floor(Math.random()*imgs.length);
+
+        let poster = document.getElementById("poster");
+        poster.src = imgs[n];
+    </script>
+</html>
